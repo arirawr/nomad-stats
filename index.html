@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.4.0/css/pikaday.css" integrity="sha256-ia5Bna5k0efvN2A6kdmvcNJidHRrbDdRyq/S9dCrN/I=" crossorigin="anonymous" />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.4.0/pikaday.js" integrity="sha256-kEHLd8ODKhuyuigpvAnEm6C04ME0yUxniWlSJrNaXvw=" crossorigin="anonymous"></script>
+    <style>
+      body {
+        font-family: Helvetica Neue, Helvetica, sans-serif;
+        color: #333;
+      }
+      .row {
+        display: flex;
+        width: 100vw;
+      }
+      .number {
+        font-size: 10vw;
+        font-weight: 900;
+      }
+      .number:after {
+        font-size: 4vw;
+        font-weight: 300;
+        padding: 5px;
+      }
+      #flights:after {
+        content: "flights";
+      }
+      #destinations:after {
+        content: "destinations";
+      }
+      #countries:after {
+        content: "countries";
+      }
+      #days:after {
+        content: "days abroad";
+      }
+    </style>
+  </head>
+  <body>
+    <img width="20%" src="wordmark.png"/>
+    <div class="number" id="flights">20</div>
+    <div class="number" id="destinations">12</div>
+    <div class="number" id="countries">8</div>
+    <div class="number" id="days">59</div>
+
+    <input id="date" type="text" placeholder="DATE" id="datepicker">
+
+    <script>
+        var picker = new Pikaday({ field: document.getElementById('datepicker') });
+    </script>
+  </body>
+</html>
