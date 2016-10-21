@@ -46,6 +46,8 @@
 
     <button id="login" onclick="login()">LOGIN</button>
 
+    <button id="recorddate" onclick="addDate()">add date</button>
+
     <script src="https://www.gstatic.com/firebasejs/3.5.1/firebase.js"></script>
     <script>
       // Initialize Firebase
@@ -86,7 +88,7 @@
 
       function addDate(user) {
         var date = document.getElementById('datepicker').value;
-        firebase.database().ref('users/' + user).set({
+        firebase.database().ref('users/' + user.uid).set({
           date: date
         });
       }
