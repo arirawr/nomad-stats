@@ -86,7 +86,7 @@
         });
       }
 
-      function addDate(user) {
+      function addDate() {
         var date = document.getElementById('datepicker').value;
         firebase.database().ref('users/' + user.uid).set({
           date: date
